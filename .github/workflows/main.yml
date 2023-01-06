@@ -15,9 +15,9 @@ jobs:
         with:
           project_name: ${{ github.repository }}
           cx_tenant: beta_nova8
-          cx_base_auth_uri: https://eu.ast.checkmarx.net/
-          base_uri: https://eu.iam.checkmarx.net/
+          cx_base_auth_uri: https://eu.iam.checkmarx.net/
+          base_uri: https://eu.ast.checkmarx.net/
           cx_client_id: ${{ secrets.CXONE_ID }}
           cx_client_secret: ${{ secrets.CXONE_SECRET }}
-          apikey: ${{ secrets.APIKEY }}
+          cx_apikey: ${{ secrets.APIKEY }}
           additional_params: --debug
