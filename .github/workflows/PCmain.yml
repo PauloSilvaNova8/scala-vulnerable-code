@@ -1,12 +1,11 @@
-name: Checkmarx AST Scan - PC
 
+name: Checkmarx One Scan 06jan
 on:
   push:
     branches:
-      - main
-
+      - master
 jobs:
-  cx-scan:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,3 +18,5 @@ jobs:
           cx_tenant: ${{ secrets.TENANT }}
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.CLIENT_SECRET }}
+          #additional_params: --threshold sast-high=1
+
